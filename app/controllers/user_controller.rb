@@ -18,7 +18,7 @@ class UserController < ApplicationController
 
   def logout
     current_user.update! authentication_token: nil
-    render json: { message: 'Você deslogou com sucesso!' }
+    render json: { message: 'Você deslogou com sucesso! :)' }
   rescue StandardError => e
     render json: { message: e.message }, status: :bad_request
   end
